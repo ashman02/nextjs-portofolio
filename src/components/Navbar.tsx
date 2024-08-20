@@ -2,12 +2,11 @@
 import Link from "next/link"
 import React, { useEffect, useState } from "react"
 import { Raleway } from "next/font/google"
-import { usePathname } from "next/navigation"
+
 
 const font = Raleway({ weight: ["200", "300", "400"], subsets: ["latin"] })
 
 const Navbar = () => {
-  const [isSidebar, setIsSidebar] = useState(false)
   const [activeSection, setActiveSection] = useState("")
 
   useEffect(() => {
@@ -34,10 +33,9 @@ const Navbar = () => {
     }
   }, [activeSection])
 
-  const pathname = usePathname()
 
   return (
-    <div className="sticky top-0 z-50 bg-trust px-2 md:px-8 py-4">
+    <div className={`sticky top-0 z-50 ${activeSection === "hero" ? "bg-trust" : "bg-stand"} px-2 md:px-8 py-4 transition-colors ease-in-out duration-200`}>
       <ul
         className={`${font.className} font-normal text-lg flex items-center justify-between gap-3`}
       >
@@ -53,7 +51,7 @@ const Navbar = () => {
         <Link href={"#about"}>
           <li
             className={`${
-              activeSection === "about" ? "text-stand" : "text-light"
+              activeSection === "about" ? "text-trust" : "text-light"
             }`}
           >
             About
@@ -62,7 +60,7 @@ const Navbar = () => {
         <Link href={"#"}>
           <li
             className={`${
-              activeSection === "projects" ? "text-stand" : "text-light"
+              activeSection === "projects" ? "text-trust" : "text-light"
             }`}
           >
             Projects
@@ -71,7 +69,7 @@ const Navbar = () => {
         <Link href={"#"}>
           <li
             className={`${
-              activeSection === "contact" ? "text-stand" : "text-light"
+              activeSection === "contact" ? "text-trust" : "text-light"
             }`}
           >
             Contact
