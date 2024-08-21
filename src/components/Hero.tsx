@@ -1,12 +1,11 @@
 "use client"
 import React from "react"
 import { Raleway } from "next/font/google"
-import { useRouter } from "next/navigation"
+import Link from "next/link"
 
 const raleway = Raleway({weight : ["400", "800"], subsets: ["latin"]})
 
 const Hero = () => {
-  const router = useRouter()
   return (
     <section
       id="hero"
@@ -22,9 +21,15 @@ const Hero = () => {
         <h2 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-stand animate-slideInBlur opacity-0 animation-delay-400">
           Fullstack Developer
         </h2>
-        <button onClick={() => router.replace("/#projects")} className="mt-6 sm:mt-8 px-4 sm:px-6 py-2 sm:py-3 bg-stand text-trust font-semibold rounded-full transition duration-300 animate-slideInBlur opacity-0 animation-delay-600 hover:shadow-glow text-sm sm:text-base">
+        <Link href={"/#projects"} scroll={false}>
+        <button onClick={() =>
+              document
+                .querySelector("#projects")
+                ?.scrollIntoView({ behavior: "smooth" })
+            } className="mt-6 sm:mt-8 px-4 sm:px-6 py-2 sm:py-3 bg-stand text-trust font-semibold rounded-full transition duration-300 animate-slideInBlur opacity-0 animation-delay-600 hover:shadow-glow text-sm sm:text-base">
           Explore My Work
         </button>
+        </Link>
       </div>
     </section>
   )

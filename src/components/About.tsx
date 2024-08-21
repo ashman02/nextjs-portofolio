@@ -2,6 +2,7 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { Raleway } from "next/font/google"
+import Link from "next/link"
 
 const raleway = Raleway({ weight: ["400", "800"], subsets: ["latin"] })
 
@@ -33,13 +34,20 @@ const About = () => {
           <span className="font-bold text-trust">Tailwind CSS</span>, I design
           websites that are not only responsive but also visually stunning.
         </p>
+        <Link href={"/#contact"} scroll={false}>
         <motion.button
           className="px-5 py-3 bg-stand text-trust font-semibold rounded-full shadow-lg text-sm sm:text-base hover:shadow-glow transition duration-300"
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.3 }}
+          onClick={() =>
+            document
+              .querySelector("#contact")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
         >
           Hire Me
         </motion.button>
+        </Link>
       </motion.div>
       <motion.div
         className="absolute -top-16 -right-16 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 bg-stand rounded-full filter blur-3xl opacity-20 animate-gentleFloat"
