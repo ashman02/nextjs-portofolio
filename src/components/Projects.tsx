@@ -21,9 +21,9 @@ const Projects = () => {
       id: 2,
       title: "ChobarCart",
       description:
-        "Experience a community-driven e-commerce platform crafted with React.js and MongoDB.",
-      image: "/placesur.png",
-      link: "https://www.chobarcart.com/",
+        "E-commerce platform built with React and powered by advanced tools like React Redux.",
+      image: "/ecommerce.png",
+      link: "https://chobarcart-frontend.netlify.app/",
     },
     {
       id: 3,

@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
         <div className="mb-6 md:mb-0">
           <Link href="/">
-            <h3 className={`text-2xl font-bold ${raleway.className}`}>Ashman</h3>
+            <h3 className={`text-2xl font-bold text-center md:text-start ${raleway.className}`}>Ashman</h3>
           </Link>
           <p className="text-sm">Fullstack Developer</p>
         </div>

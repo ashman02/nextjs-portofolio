@@ -5,8 +5,9 @@ import "./globals.css";
 const inter = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ashman",
-  description: "Ashman's portfolio",
+  title: "Ashman - Fullstack Developer | React | Next.js | TypeScript",
+  description: "Ashman is a skilled Fullstack Developer specializing in React, Next.js, and TypeScript. With expertise in HTML, CSS, JavaScript, and MongoDB, Ashman creates robust, scalable web applications.",
+  keywords : "Fullstack Developer, React, Next.js, TypeScript, JavaScript, HTML, CSS, MongoDB, Web Development, Portfolio",
 };
 
 export default function RootLayout({
