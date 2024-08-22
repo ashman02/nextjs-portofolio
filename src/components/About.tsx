@@ -25,7 +25,7 @@ const About = () => {
           Meet Ashman
         </h2>
         <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-dark leading-relaxed mb-6">
-          I'm a Fullstack Developer who specializes in creating high-quality,
+          I&apos;m a Fullstack Developer who specializes in creating high-quality,
           performant websites. With the{" "}
           <span className="font-bold text-trust">MERN stack</span>, I build
           robust and scalable applications. Using{" "}

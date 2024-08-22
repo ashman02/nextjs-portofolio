@@ -24,7 +24,7 @@ const Contact = () => {
           Get in Touch
         </h2>
         <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-dark leading-relaxed mb-8">
-          I'd love to hear from you! Fill out the form below and let's connect.
+          I&apos;d love to hear from you! Fill out the form below and let&apos;s connect.
         </p>
         <form action="https://formspree.io/f/xvoewlka" method='POST' className="text-left">
           <div className="mb-6">
