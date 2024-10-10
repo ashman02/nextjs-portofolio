@@ -102,7 +102,7 @@ const Projects = () => {
           viewport={{ once: true }}
         >
           <Link
-            href="https://github.com/chobar02"
+            href="https://github.com/ashman02"
             target="_blank"
             rel="noopener noreferrer"
           >
